@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="SpringLinked:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/SpringLinked_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="SpringLinked" />
+        </element>
+        <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      </element>
+      <element id="javaee-facet-resources" facet="SpringLinked/web/Web" />
+    </root>
+  </artifact>
+</component>
