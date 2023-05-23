@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="mimi" class="basic_di.e_complexInject.bean.Cat"></bean>
+<bean class="basic_di.e_complexInject.bean.Person">
+    <property name="names">
+        <array>
+            <value>张三</value>
+            <value>李四</value>
+        </array>
+    </property>
+    <property name="tels">
+        <list>
+            <value>10010</value>
+            <value>10086</value>
+        </list>
+    </property>
+    <property name="cats">
+        <set>
+            <bean class="basic_di.e_complexInject.bean.Cat">
+            </bean>
+            <ref bean="mimi"/>
+        </set>
+    </property>
+    <property name="events">
+        <map>
+            <entry key="8:00" value="起床"></entry>
+            <entry key="14:00">
+                <ref bean="mimi"/>
+            </entry>
+        </map>
+    </property>
+    <property name="props">
+        <props>
+            <prop key="sex">男</prop>
+        </props>
+    </property>
+</bean>
+</beans>
